@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio - Doces Encanto</title>
+    <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-container">
+            <img src="assets/images/logo-doces-encanto.png" alt="Doces Encanto" class="logo">
+        </div>
+        <h1>Doces Encanto</h1>
+        <nav>
+            <a href="Doces_Encanto_Homepage.html">Início</a>
+            <a href="Doces_Encanto_Sobre_Nos.html">Sobre Nós</a>
+            <a href="Doces_Encanto_Portfolio.html" class="active">Portfólio</a>
+            <a href="Doces_Encanto_Contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Descubra Nossos Deliciosos Produtos</h1>
+        <img src="assets/images/banner-portfolio.png" alt="Portfólio Doces" class="banner-image">
+    </section>
+
+    <!-- Galeria de Portfólio -->
+    <section class="portfolio">
+        <h2>Produtos Personalizados</h2>
+
+        <!-- Categorias -->
+        <div class="categories">
+            <button class="category-btn" data-category="bolos">Bolos</button>
+            <button class="category-btn" data-category="cupcakes">Cupcakes</button>
+            <button class="category-btn" data-category="brigadeiros">Brigadeiros Gourmet</button>
+            <button class="category-btn" data-category="biscoitos">Biscoitos Decorados</button>
+        </div>
+
+        <!-- Galeria -->
+        <div class="galeria">
+            <!-- Categoria Bolos -->
+            <div class="item bolos">
+                <img src="assets/images/bolo1.png" alt="Bolo 1">
+                <p>Bolo Personalizado 1</p>
+                <p class="descricao">Bolos feitos sob encomenda para diversas ocasiões, com designs exclusivos e saborosos.</p>
+            </div>
+            <div class="item bolos">
+                <img src="assets/images/bolo2.png" alt="Bolo 2">
+                <p>Bolo Temático 2</p>
+                <p class="descricao">Bolos temáticos personalizados para festas e eventos especiais.</p>
+            </div>
+            <div class="item bolos">
+                <img src="assets/images/bolo3.png" alt="Bolo 3">
+                <p>Bolo de Casamento</p>
+                <p class="descricao">Bolos de casamento personalizados, perfeitos para o seu grande dia.</p>
+            </div>
+
+            <!-- Categoria Cupcakes -->
+            <div class="item cupcakes">
+                <img src="assets/images/cupcake1.png" alt="Cupcake 1">
+                <p>Cupcake Temático 1</p>
+                <p class="descricao">Cupcakes decorados com cores vibrantes e deliciosos sabores.</p>
+            </div>
+            <div class="item cupcakes">
+                <img src="assets/images/cupcake2.png" alt="Cupcake 2">
+                <p>Cupcake Gourmet</p>
+                <p class="descricao">Cupcakes com ingredientes premium e sabores exclusivos.</p>
+            </div>
+            <div class="item cupcakes">
+                <img src="assets/images/cupcake3.png" alt="Cupcake 3">
+                <p>Cupcake de Chocolate</p>
+                <p class="descricao">Deliciosos cupcakes de chocolate, fofinhos e irresistíveis.</p>
+            </div>
+
+            <!-- Categoria Brigadeiros -->
+            <div class="item brigadeiros">
+                <img src="assets/images/brigadeiro1.png" alt="Brigadeiro Gourmet 1">
+                <p>Brigadeiro Gourmet 1</p>
+                <p class="descricao">Brigadeiros gourmet com recheios de sabores exclusivos.</p>
+            </div>
+            <div class="item brigadeiros">
+                <img src="assets/images/brigadeiro2.png" alt="Brigadeiro Gourmet 2">
+                <p>Brigadeiro de Café</p>
+                <p class="descricao">Brigadeiro gourmet com um toque de café, para os amantes dessa bebida.</p>
+            </div>
+            <div class="item brigadeiros">
+                <img src="assets/images/brigadeiro3.png" alt="Brigadeiro Gourmet 3">
+                <p>Brigadeiro de Framboesa</p>
+                <p class="descricao">Brigadeiro gourmet de framboesa, com sabor inconfundível e delicado.</p>
+            </div>
+
+            <!-- Categoria Biscoitos -->
+            <div class="item biscoitos">
+                <img src="assets/images/biscoito1.png" alt="Biscoito Decorado 1">
+                <p>Biscoito Decorado 1</p>
+                <p class="descricao">Biscoitos decorados com glacê, perfeitos para lembrancinhas e eventos.</p>
+            </div>
+            <div class="item biscoitos">
+                <img src="assets/images/biscoito2.png" alt="Biscoito Decorado 2">
+                <p>Biscoito Temático</p>
+                <p class="descricao">Biscoitos decorados com designs personalizados para cada ocasião.</p>
+            </div>
+            <div class="item biscoitos">
+                <img src="assets/images/biscoito3.png" alt="Biscoito Decorado 3">
+                <p>Biscoito de Natal</p>
+                <p class="descricao">Biscoitos decorados com tema natalino, perfeitos para presentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Doces Encanto. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Script para filtrar categorias
+        const buttons = document.querySelectorAll('.category-btn');
+        const items = document.querySelectorAll('.item');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                items.forEach(item => {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
